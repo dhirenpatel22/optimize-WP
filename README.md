@@ -33,3 +33,34 @@ Potential future additions (behind an options screen) could include:
 - More granular control over REST API hardening.
 - Front-end-only script/style tweaks specific to your theme.
 
+## Plugin and theme integrations
+
+### Conditional plugin integrations
+
+Optimize WP automatically loads small, safe integrations **only when matching plugins are active**. Each integration lives in its own file under `integrations/` and mainly:
+
+- Trims **admin bar menus** and dashboard widgets.
+- Reduces **unnecessary admin/background noise**.
+- Avoids changing core plugin behavior on the front-end.
+
+Currently supported plugins (when installed and active):
+
+- **SEO**: Yoast SEO, All in One SEO, Rank Math.
+- **Forms / builders**: Contact Form 7, WPForms, Formidable Forms, Elementor, Ultimate Addons for Elementor, Essential Addons for Elementor.
+- **Commerce**: WooCommerce (includes guest cart-fragment optimization on non-cart / non-checkout pages).
+- **Performance / caching / images**: W3 Total Cache, WP Super Cache, LiteSpeed Cache, Smush.
+- **Security / SSL / backups**: Wordfence, Really Simple SSL, UpdraftPlus.
+- **Analytics / marketing / email / utilities**: MonsterInsights, MailPoet, Jetpack, Redirection.
+- **Other**: Akismet, Polylang, Classic Editor, Advanced Custom Fields.
+
+### Theme integrations
+
+Optimize WP also includes conditional integrations for themes:
+
+- **Astra**:
+  - Can disable Astra Google Fonts and schema output if you prefer your SEO plugin and performance stack to handle these.
+  - Cooperates with Elementor Theme Builder so Elementor-built pages can take over titles/headers/footers without duplication.
+- **Hello Elementor**:
+  - Lightweight hook point for future tweaks (kept minimal because the theme is already very barebones).
+
+
